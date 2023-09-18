@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+input {
+    caret-color: transparent;
+}
 nav{
     background-color: RGB(230, 230, 250);
     color: black;
@@ -11,27 +14,32 @@ nav{
     display: flex;
     justify-content: left;
     align-items: center;
+    caret-color: transparent;
     font-family: 'Raleway', sans-serif;
 }
 nav ul{
     list-style-type: none;
     margin-left: 20px;
+    caret-color: transparent;
 }
 .gameContainer{
     display: flex;
     justify-content: center;
     margin-top: 50px;
+    caret-color: transparent;
 }
 .container{
     display: grid;
     grid-template-columns: repeat(3,10vw);
     grid-template-rows: repeat(3,10vw);
     font-family:  'Jolly Lodger', cursive;;
+    caret-color: transparent;
 }
 .box{
     border: 2px solid black;
     font-size: 8vw;
     display: flex;
+    caret-color: transparent;
     justify-content: center;
 }
 .box:hover{
@@ -44,6 +52,9 @@ nav ul{
 #reset{
     border-radius: 50%;
     padding: 10px;
+    cursor: pointer;
+    margin-left: 8px;
+    
 }
 .br-0{
     border-right: 0;
@@ -56,4 +67,25 @@ nav ul{
 }
 .bb-0{
     border-bottom: 0;
+}
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width: 950px)
+{
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+    .container { 
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
 }

@@ -31,11 +31,6 @@ const checkWin = ()=>{
             document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "200px";
         
         }
-        if(! document.querySelector('.info').innerText === "The Winner Is: "+boxtext[e[0]].innerText ){
-            music.play()
-            document.querySelector('.info').innerText = "It's Tie: "
-            isgameover = true
-        }
     })
 }
 
